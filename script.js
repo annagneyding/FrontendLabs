@@ -81,6 +81,40 @@ window.addEventListener('load', () => {
         task_actions_el.appendChild(taskCheckbox);
 
 
+
+
+
     });
+
+    const filterElements = document.querySelectorAll('input[name="filter"]');
+    for (const filter of filterElements) {
+        filter.addEventListener('change', (e) => {
+
+            const listElements = document.querySelectorAll('div.task');
+            for (let element of listElements) {
+                element.style.display = 'flex';
+            }
+            console.log(e.target.value);
+
+            switch (e.target.value) {
+                case '1':
+                    const checkedElements = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+                    for (let element of checkedElements) {
+                        element.parentNode.parentNode.style.display = 'none';
+                    }
+                    break;
+                case '2':
+                    const notCheckedElements = document.querySelectorAll('input[type="checkbox"]:checked');
+                    for (let element of notCheckedElements) {
+                        element.parentNode.parentNode.style.display = 'none';
+                    }
+                    break;
+                default:
+
+            }
+
+        });
+    }
+
 
 });
