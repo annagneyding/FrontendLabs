@@ -152,6 +152,24 @@ main {
     color: #651D6D;
 }
 
-.checkbox {
-    background-color: --pink;
+.radioButtons {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text; /* определяет как цвет фона будет выводиться под границами блока */
+    -webkit-text-fill-color: transparent; /* определяет цвет заливки символов текста */
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button {
+    color: #8f155d;
+    font-size: 1rem;
+    font-weight: 700;
+    /* background-image: linear-gradient(to right, var(--pink), var(--purple)); */
+    /* -webkit-background-clip: text; /* определяет как цвет фона будет выводиться под границами блока */
+    /* -webkit-text-fill-color: transparent; определяет цвет заливки символов текста */ */
+    cursor: pointer;
+    transition: 0.4s;
 }
